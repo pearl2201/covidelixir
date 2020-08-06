@@ -1,4 +1,4 @@
-defmodule Covidelixir.MixProject do
+defmodule CovidElixir.MixProject do
   use Mix.Project
 
   def project do
@@ -14,7 +14,7 @@ defmodule Covidelixir.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger,:httpoison]
     ]
   end
 

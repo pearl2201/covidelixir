@@ -16,6 +16,14 @@ def deps do
   ]
 end
 ```
+Or
+```elixir
+def deps do
+  [
+    {:covidelixir, git: "https://github.com/pearl2201/covidelixir.git"}
+  ]
+end
+```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can

@@ -28,7 +28,6 @@ defmodule CovidElixir do
         }}
   """
   def get_global_data() do
-    HTTPoison.start()
 
     case HTTPoison.get("#{@base_disease_url}/all") do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
@@ -93,7 +92,6 @@ defmodule CovidElixir do
     ]}
   """
   def get_continents_data() do
-    HTTPoison.start()
 
     case HTTPoison.get("#{@base_disease_url}/continents") do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
@@ -157,7 +155,6 @@ defmodule CovidElixir do
   }}
   """
   def get_data_by_continent(continent) when is_binary(continent) do
-    HTTPoison.start()
 
     case HTTPoison.get("#{@base_disease_url}/continents/#{continent}") do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
@@ -221,7 +218,6 @@ defmodule CovidElixir do
   ]}
   """
   def get_countries_data() do
-    HTTPoison.start()
 
     case HTTPoison.get("#{@base_disease_url}/countries") do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
@@ -292,7 +288,6 @@ defmodule CovidElixir do
   }}
   """
   def get_data_by_country(country) when is_binary(country) do
-    HTTPoison.start()
 
     case HTTPoison.get("#{@base_disease_url}/countries/#{country}") do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
